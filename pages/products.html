@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    /* body{
+        background-color: #212529;
+        color: white;
+    } */
+</style>
+
+<body>
+    <div id="adminNavBar"></div>
+    
+    <div class="container border bg-light my-4 py-2 w-100 ">
+        <h3 class="text-center my-2"> ADD PRODUCT</h3>
+        <form id="productForm">
+
+            <div class="row my-2">
+                <div class="col-4 my-2">
+                    <p class="text-end"> Product Name</p>
+                </div>
+                <div class="col-4 my-2">
+                    <input type="text" id="pname" class="form-control" placeholder="Product Name">
+                </div>
+                <div class="col-4">
+                    <span id="pNameSpan" style="color: red;"></span>
+                </div>
+            </div>
+
+
+            <div class="row my-2">
+                <div class="col-4 my-2">
+                    <p class="text-end"> Product price</p>
+                </div>
+                <div class="col-4 my-2">
+                    <input type="text" id="pPrice" class="form-control" placeholder="Product price"
+                        onkeypress="validPrice(event);">
+                </div>
+                <div class="col-4">
+                    <span id="pPriceSpan" style="color: red;"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 my-2">
+                    <p class="text-end"> Product Brand</p>
+                </div>
+                <div class="col-4 my-2">
+                    <select id="select" class="form-select form-select-md mb-3">
+                        <option selected value=""> Select Brand</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Android">Android</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <span id="pSelectSpan" style="color: red;"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <p class="text-end"> Product Image</p>
+                </div>
+                <div class="col-4">
+                    <input type="file" id="pImage" class="form-control" placeholder="Product Image">
+                </div>
+                <div class="col-4">
+                    <span id="pImageSpan" style="color: red;"></span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-2 my-2">
+                    <!-- <label for="productImage" class="form-label"> Product Image</label> -->
+                </div>
+                <div class="col-6 py-4 my-4">
+                    <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="submit the info" onclick="submitData();">INSERT</button>
+                    <button type="reset" class="btn btn-secondary">CANCEL</button>
+                    <!-- <input type="file"  id="pImage" class="form-control" placeholder="Product Image"> -->
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- external link -->
+    <script src="../script/index.js"></script>
+    <script src="../script/product.js"></script>
+    <script>adminNavBar();</script>
+    <!-- bootstrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+        </script>
+</body>
+
+</html>

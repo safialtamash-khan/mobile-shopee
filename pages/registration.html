@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="navBar"></div>
+
+  <div class="container  my-4 bg-light py-4">
+    <h3 class="text-center my-2"> USER REGISTRATION FORM</h3>
+    <form id="form1">
+
+      <div class="row">
+        
+        <div class="col-4 my-2">
+          <p class="text-end">FULL NAME</p>
+        </div>
+
+        <div class="col-4 my-2">
+          <input type="text" id="txtName" 
+          class="form-control" 
+          placeholder="enter name"
+          onkeypress="checkValidName(event);">
+        </div>
+
+        <div class="col-4">
+          <span id="nameSpan" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-4 mb-3 my-2">
+          <p class="text-end">EMAIL ID</p>
+        </div>
+
+        <div class="col-4 my-2">
+          <input type="email" id="txtMail" class="form-control" placeholder="enter email"
+            onkeypress="checkValidMail(this);">
+        </div>
+        <div class="col-4">
+          <span id="mailSpan" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-4 mb-3 my-2">
+          <p class="text-end">MOBILE NUMBER</p>
+        </div>
+        
+        <div class="col-4 my-2">
+          <input type="text" id="txtMobile" 
+          class="form-control" 
+          placeholder="enter number"
+          onkeypress="validMobileNo(event);">
+        </div>
+        
+        <div class="col-4">
+          <span id="mobileSpan" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 mb-3 my-2">
+          <p class="text-end">NEW PASSWORD</p>
+        </div>
+        <div class="col-4 my-2">
+          <input type="password" id="txtPassword" class="form-control" placeholder="enter number"
+            onkeypress="passLength(this);">
+        </div>
+        <div class="col-4">
+          <span id="passwordSpan" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 mb-3 my-2">
+          <p class="text-end">CONFIRM PASSWORD</p>
+        </div>
+        <div class="col-4 my-2">
+          <input type="password" id="txtConfirm" class="form-control" placeholder="enter password"
+            onblur="matchPassword(this);">
+        </div>
+        <div class="col-4">
+          <span id="confirmSpan" style="color: red;"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 mb-3 my-2">
+          <!-- <label for="" class="form-label">confirm password</label> -->
+        </div>
+        <div class="col-4 my-2">
+          <button type="button" class="btn btn-primary" onclick="checkForm();">REGISTER</button>
+          <button type="reset" class="btn btn-danger">CANCEL</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- external..script -->
+  <script src="../script/index.js"></script>
+  <script src="../script/registration.js"></script>
+  
+    <script>
+        homeMenu();
+    </script>();
+  
+  <!-- bootstrap link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
